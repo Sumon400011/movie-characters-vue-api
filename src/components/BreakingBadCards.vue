@@ -1,11 +1,4 @@
 <template>
-    <!-- <div>
-        <ul>
-            <li v-for="char in characters" :key="char.char_id">{{ char.char_id }} :-{{ char.name }}</li>
-        </ul>
-        <button @click="(page = page - 1)">Prev</button>
-        <button @click="page = page + 1">Next</button>
-    </div> -->
     <div class="container">
         <div class="cards">
             <Card 
@@ -15,6 +8,10 @@
                 :name="char.name"
                 :occupation="char.occupation"
             />
+        </div>
+        <div class="button-container">
+            <button @click="page = page - 1">&lt;</button>
+            <button @click="page = page + 1">></button>
         </div>
     </div>
 </template>
