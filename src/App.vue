@@ -13,6 +13,6 @@
   </main>
 </template>
 <script setup>
-  import BreakingBadCards from "./components/BreakingBadCards.vue"
+  import BreakingBadCards from "./components/BreakingBadCards.vue";
 </script>
 
