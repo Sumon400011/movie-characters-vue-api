@@ -2,7 +2,7 @@
   <main>
     <Suspense>
       <template #default>
-        <BreakingBadCards />
+        <RickyMortinsCards />
       </template>
       <template #fallback>
         <div>
@@ -13,6 +13,7 @@
   </main>
 </template>
 <script setup>
-  import BreakingBadCards from "./components/BreakingBadCards.vue";
+  // import BreakingBadCards from "./components/BreakingBadCards.vue";
+  import RickyMortinsCards from "./components/RickyMortinsCards.vue";
 </script>
 

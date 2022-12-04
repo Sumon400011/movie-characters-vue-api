@@ -6,8 +6,13 @@
                 :key="char.char_id"
                 :image="char.img"
                 :name="char.name"
-                :occupation="char.occupation"
-            />
+            >
+            <div class="jobs">
+                <p v-for="(job, index) in char.occupation" :key="index">
+                    {{job}}<span v-if="(index < char.occupation.length - 1)">, &nbsp;</span>
+                </p>
+            </div>
+            </Card>
         </div>
         <div class="button-container">
             <button @click="page = page - 1">&lt;</button>
