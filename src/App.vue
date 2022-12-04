@@ -4,8 +4,10 @@
       :characterShow="characterShow"
       @SelectShow="characterShow = !characterShow"
     />
-    <BreakingBadSuspence />
-    <RickyMortinSuspence />
+    <KeepAlive>
+      <BreakingBadSuspence v-if="characterShow"/>
+      <RickyMortinSuspence v-else/>
+    </KeepAlive>
   </main>
 </template>
 <script setup>
