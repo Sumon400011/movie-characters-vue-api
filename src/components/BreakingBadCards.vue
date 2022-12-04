@@ -22,13 +22,15 @@
 </template>
 <script setup>
     import axios from "axios";
-    import { ref, watch } from "vue";
+    import { ref, watch, onMounted } from "vue";
     import Card from "./Card.vue"
     const characters = ref(null);
     const page = ref(0);
 
-    const response = await axios.get("https://www.breakingbadapi.com/api/characters?limit=8&offset=0");
-    characters.value = response.data;
+    onMounted(async () => {
+        const response = await axios.get("https://www.breakingbadapi.com/api/characters?limit=8&offset=0");
+        characters.value = response.data;
+    });
 
     watch(page, async () => {
         const res = await axios.get(`https://www.breakingbadapi.com/api/characters?limit=8&offset=${page.value * 8}`);

@@ -1,26 +1,18 @@
 <template>
   <main>
-    <Header 
+    <HeaderComp
       :characterShow="characterShow"
       @SelectShow="characterShow = !characterShow"
     />
-    <Suspense>
-      <template #default>
-        <RickyMortinsCards />
-      </template>
-      <template #fallback>
-        <div>
-          <p>Loading.....</p>
-        </div>
-      </template>
-    </Suspense>
+    <BreakingBadSuspence />
+    <RickyMortinSuspence />
   </main>
 </template>
 <script setup>
   import { ref } from "vue";
-  // import BreakingBadCards from "./components/BreakingBadCards.vue";
-  import RickyMortinsCards from "./components/RickyMortinsCards.vue";
-  import Header from "./components/Header.vue";
+  import BreakingBadSuspence from "./components/BreakingBadSuspence.vue";
+  import RickyMortinSuspence from "./components/RickyMortinSuspence.vue";
+  import HeaderComp from "./components/HeaderComp.vue";
 
   const characterShow = ref(true);
 </script>
