@@ -26,7 +26,6 @@
     onMounted(async () => {
         const response = await axios.get("https://rickandmortyapi.com/api/character/?page=1");
         characters.value = response.data.results;
-        console.log(characters.value)
     });
 
     watch(page, async () => {
